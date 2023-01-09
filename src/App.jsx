@@ -18,46 +18,48 @@ import SignupForm from './Components/signupForm';
 import AddtoCard from './Components/AddtoCard';
 import SignupForm2 from './Components/SignupForm2';
 import LogInPage from './Components/Signup';
+import Header from './Components/Header/Header';
+
+
 function App() {
   return (
     <div className="App">
       {/* <Collection/> */}
-    {/* <Home/> */}
-    {/* <Tatsu/> */}
-    {/* <MyreviewAdmin/> */}
-    {/* <About/> */}
-    {/* <Contactuss/> */}
-    {/* <Subcription/> */}
+      {/* <Home/> */}
+      {/* <Tatsu/> */}
+      {/* <MyreviewAdmin/> */}
+      {/* <About/> */}
+      {/* <Contactuss/> */}
+      {/* <Subcription/> */}
       {/* <SignupForm/> */}
       {/* <Signup3/>  */}
-{/* <LogInPage/> */}
-    {/* <Login/> */}
+      {/* <LogInPage/> */}
       {/* <Login/> */}
-    {/* <SignupForm/> */}
-{/* <SignupForm2/>       */}
+      {/* <Login/> */}
+      {/* <SignupForm/> */}
+      {/* <SignupForm2/>       */}
 
-{/* <AddtoCard/> */}
+      {/* <AddtoCard/> */}
 
 
-    <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path={"/"} element={<Home/>} />
-          <Route path={"/AddtoCard"} element={<AddtoCard/>} />
-          <Route path={"/Login"} element={<Login/>} />
-          <Route path={"/Signup"} element={<LogInPage/>} />
-          <Route path={"/SignupForm1"} element={<SignupForm/>} />
-          <Route path={"/SignupForm2"} element={<SignupForm2/>} />
-          <Route path={"/SignupForm3"} element={<Signup3/>} />
-          <Route path={"/Subcription"} element={<Subcription/>} />
-          <Route path={"/Contact-us"} element={<Contactuss/>} />
-          <Route path={"/Collection"} element={<Collection />} />
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/Login"} element={<Login />} />
+          <Route path={"/Signup"} element={<LogInPage />} />
+          <Route path={"/SignupForm1"} element={<SignupForm />} />
+          <Route path={"/SignupForm2"} element={<SignupForm2 />} />
+          <Route path={"/SignupForm3"} element={<Signup3 />} />
+          <Route path={"/subcription"} element={<Subcription />} />
+          <Route path={"/contactus"} element={<Contactuss />} />
+          <Route path={"/collection"} element={<Collection />} />
           <Route path={"/Tatsu"} element={<Tatsu />} />
-          <Route path={"/About"} element={<About />} />
-          <Route path={"/AddtoCard"} element={<AddtoCard/>} />
-          <Route path={"/DashbordOrderAdmin"} element={<DashbordOrderAdmin/>} />
-          <Route path={"/MyreviewAdmin"} element={<MyreviewAdmin/>} />
-          <Route path={"/MembershipVip"} element={<MembershipVip/>} />
-          <Route path={"/OrderVipMember"} element={<OrderVipMember/>} />
+          <Route path={"/about"} element={<About />} />
+          <Route path={"/AddtoCard"} element={<AddtoCard />} />
+          <Route path={"/DashbordOrderAdmin"} element={<DashbordOrderAdmin />} />
+          <Route path={"/MyreviewAdmin"} element={<MyreviewAdmin />} />
+          <Route path={"/MembershipVip"} element={<MembershipVip />} />
+          <Route path={"/OrderVipMember"} element={<OrderVipMember />} />
         </Routes>
       </BrowserRouter>,
     </div>

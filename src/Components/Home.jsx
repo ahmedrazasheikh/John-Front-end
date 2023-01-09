@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './Home.css'
-import './home.scss'
+import './home.scss';
+import { Link } from "react-router-dom";
 import bb from '../assets/images/menu-icon.svg'
 import logo from '../assets/images/header-logo-1.svg'
 import man from '../assets/images/user.svg'
@@ -29,10 +30,28 @@ import rigth from '../assets/images/next-icon.png'
 // import 'pure-react-carousel/dist/react-carousel.es.css';
 import left from '../assets/images/prevew-icon.png'
 import troser from '../assets/images/home-shorts.png'
-
+import { Drawer, Button, Divider } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 import shirtsdd from '../assets/images/shirt-2.png'
+
+
+
 const Home = () => {
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const showDrawer = () => { setIsVisible(true); };
+  const closeDrawer = () => { setIsVisible(false); };
+
+  const styles = {
+    button: {
+      background: "transparent",
+      outline: "none",
+      color: "black",
+      border: "none",
+      fontSize: 26
+    },
+  };
 
 
 
@@ -41,7 +60,13 @@ const Home = () => {
       <div className='bg-black py-2  text-center	  text-white'> Spend $50 for free shipping</div>
       <div className='mmmmiok' >
         <div className='mmnnhhyy'>
-          <img src={bb} className='sasaasjmj' alt="Not Found" />
+          {/* <img src={bb} className='sasaasjmj' alt="Not Found" /> */}
+
+          {/* <nav> */}
+            <Button shape="circle" style={styles.button} onClick={showDrawer}>
+              <MenuOutlined style={{ color: "white" }} />
+            </Button>
+          {/* </nav> */}
 
           <img src={logo} alt="" />
 
@@ -93,6 +118,25 @@ const Home = () => {
         </p>
       </div>
 
+      <Drawer
+        visible={isVisible}
+        placement="left"
+        onClose={closeDrawer}
+        title="My Drawer"
+      >
+        {/* <button type="button" class="btn-close text-reset" onClick={closeDrawer} data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
+
+        {/* <Divider /> */}
+        <p id="nav-item"><Link to="/" class="text-white">Home</Link></p>
+        <Divider />
+        <p id="nav-item"><Link to="/about" class="text-white">About Us</Link></p>
+        <Divider />
+        <p id="nav-item"><Link to="/collection" class="text-white">Collection</Link></p>
+        <Divider />
+        <p id="nav-item"><Link to="/subcription" class="text-white">Subcription</Link></p>
+        <Divider />
+        <p id="nav-item"><Link to="/contactus" class="text-white">Contact Us</Link></p>
+      </Drawer>
 
       {/* Third Part Missing  */}
 
